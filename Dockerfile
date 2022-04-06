@@ -3,6 +3,7 @@ FROM golang:alpine as builder
 RUN mkdir /build 
 ADD . /build/
 WORKDIR /build 
+RUN go mod init
 RUN go build -o main .
 FROM alpine
 ENV PORT 8080
