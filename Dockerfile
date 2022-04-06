@@ -3,7 +3,7 @@ FROM golang:alpine as builder
 RUN mkdir /build 
 ADD . /build/
 WORKDIR /build 
-RUN go get git-scm.com/downloads
+RUN go init git-scm.com/downloads
 RUN go build -o main .
 FROM alpine
 ENV PORT 8080
