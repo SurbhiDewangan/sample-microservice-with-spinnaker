@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-// HandlerFunc1 handles basic calls
+// HandlerFunc1 handles basic callss
 func HandlerFunc1(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "\nRelease 1.011")
 }
