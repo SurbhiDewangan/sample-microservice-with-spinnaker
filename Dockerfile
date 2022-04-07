@@ -3,6 +3,7 @@ FROM golang:alpine as builder
 RUN mkdir /build 
 ADD . /build/
 WORKDIR /build 
+RUN apk install git
 RUN go mod init run
 RUN go build -o main .
 FROM alpine
