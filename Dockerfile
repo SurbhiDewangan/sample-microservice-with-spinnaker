@@ -1,4 +1,4 @@
-# A Go multistage docker file
+# #A Go multistage docker file
 FROM golang:alpine as builder
 RUN mkdir /build 
 ADD . /build/
